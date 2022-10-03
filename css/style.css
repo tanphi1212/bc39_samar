@@ -1,0 +1,482 @@
+/* resest css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Global */
+
+.button__style {
+    padding: 1.2rem 2rem;
+    color: white;
+    /*  linear-gradient(hướng trải màu, danh sách các màu );
+      _ to right: màu đang được trải từ trái sang phải
+      _ #fc00ff 0%, #00dbde 51%, #fc00ff 100%: thứ tự màu cần trải, phần trăm sau mã màu là vị trí bắt đầu trải của màu đó.
+        Nếu không thêm phần trăm thì linear-gradient sẽ tự chia vùng màu sao cho đều nhau
+    */
+    background-image: linear-gradient(to right,
+            #f55f8d 0%,
+            #f8ae56 51%,
+            #f55f8d 100%);
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    /*   tăng kích thước của màu nền, giúp vùng trải màu rộng hơn làm màu loan ra rộng hơn */
+    background-size: 200%;
+
+    transition: all 0.5s;
+}
+
+.button__style:hover {
+    /*   Khi hover chỉnh vị trí ưu tiên hiển thị của màu nền. 
+    Mặc định không xét giá trị cho background-position 
+    thì sẽ có giá trị mặc định background-position: left top; 
+    */
+    background-position: right center;
+}
+
+.title p{
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 1.3rem;
+    color: #f55f8d;
+}
+
+.title h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 1.3rem;
+    color: #262626;
+}   
+
+/* Header */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header__container {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.header__nav ul {
+    display: flex;
+    margin-right: 30px;
+}
+
+.header__nav ul li {
+    padding: 55px 15px;
+    list-style: none;
+    transition: all 1s;
+}
+
+.header__nav ul li a span {
+    display: inline-block;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.header__nav ul li a {
+    text-decoration: none;
+    color: #070120;
+}
+
+.header__nav ul li a i {
+    font-size: 0.5rem;
+    margin-top: -3px;
+    vertical-align: middle
+}
+
+.header__nav ul li:hover a {
+    color: #f55f8d;
+}
+
+.header__nav ul li:hover a span {
+    animation: upToDown 0.3s;
+}
+
+
+
+@keyframes upToDown {
+    49% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    51% {
+        opacity: 1;
+    }
+}
+
+/* carousel */
+#carousel{
+    position: relative;
+    background-image: url(/images/pic2.png);
+    background-size: 100%;
+    padding-top: 180px;
+}
+
+.carousel__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel__content{
+    display: flex;
+    align-items: center;
+}   
+
+.carousel__left{
+    width: 60%;
+}
+
+.carousel__right{
+    width: 40%;
+}
+
+.carousel__article p{
+    margin-bottom: 15px;
+    color: #636363;
+    font-size: 1.2rem;
+}
+
+.carousel__article ul{
+    margin-bottom: 15px;
+}
+
+.carousel__article ul li{
+    padding: 10px 0;
+    list-style: none;
+}
+
+.carousel__article ul li i{
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right,
+    #f55f8d 0%,
+    #f8ae56 51%,
+    #f55f8d 100%);
+    background-size: 200%;
+    padding: 0.3rem;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 10px;
+}
+
+
+.carousel__article ul li span{
+    color: #636363;
+    font-size: 1.2rem;
+}
+
+/* Services */
+#services{
+    padding-top: 120px;
+    background-image: url(./../images/bg2.png);
+    background-size: cover;
+    background-position: top center;
+}
+
+.services__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services__container .title{
+    text-align: center;
+}
+
+.services__content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.services__item{
+    padding: 30px 45px;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0 , 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.services__item img{
+    width: 200px;
+}
+
+.services__item h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 15px;
+    color: #262626;
+}
+
+.services__item p{
+    line-height: 1.6;
+}
+
+.services__item:hover{
+    transform:  translateY(-20px);
+}
+
+
+/* About Us*/
+#aboutUs{
+    padding-top: 120px;
+    padding-bottom: 100px;
+    background-image: url(../images/bg15.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aboutUs__container{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+
+.aboutUs__content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+.aboutUs__left{
+    width: 60%;
+    position: absolute;
+    left: -15%;
+}
+
+.aboutUs__left img{
+    width: 100%;
+    border-radius: 0 60px 60px 0;
+}
+
+
+.aboutUs__right{
+    width: 50%;
+}
+
+.aboutUs__article p{
+    margin-bottom: 15px;
+    line-height: 1.6rem;
+}
+
+.aboutUs__article ul{
+    margin-bottom: 15px;
+}
+
+.aboutUs__article ul li{
+    list-style: none;
+    line-height: 1.6;
+}
+
+.aboutUs__article ul li i{
+    font-size: 1.5rem;
+    color: #f55f8d;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* countUp */
+
+#countUp{
+    padding: 80px 0 50px;
+    background-image: url(../images/bg14.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.countUp__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.countUp__content{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.countUp__item i{
+    display: inline-block;
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background-size: 200%;
+    background-image: linear-gradient(to right,
+    #f55f8d 0%,
+    #f8ae56 51%,
+    #f55f8d 100%);
+    margin-bottom: 15px;
+}
+
+.countUp__item p:nth-child(2),
+.countUp__item p:nth-child(2) span{
+    color: #f55f8d;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+
+/*  features */
+#features{
+    padding-top: 120px;
+    background-image: url(../images/bg2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.features__container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.features__content{
+    
+    display: flex;
+}
+
+.features__left{
+    width: 50%;
+}
+
+.features__right{
+    width: 50%;
+}
+
+.features__group .features__item:nth-child(2){
+    padding: 0 0 50px 30px;
+}
+
+.features__item {
+    padding: 0 30px 50px 0;
+}
+
+.features__bg{
+    padding: 30px;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 60px rgba(0 , 0, 0, 0.1) ;
+    border-radius: 15px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+    
+}
+
+.features__bg::after{
+    content: "";
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    #f55f8d 0,
+    #f8ae56 51%,
+    #f55f8d 100%
+  );
+  background-size: 200%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.features__bg:hover::after{
+    opacity: 1;
+}
+
+.features__bg:hover i,
+.features__bg:hover  .features__detail{
+    color: #fff;
+}
+
+.features__bg i,
+.features__detail{
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.features__item i{
+    font-size: 5rem;
+    color: #f55f8d;
+    margin-right: 15px;
+
+}
+
+.features__detail h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.features__detail p{
+    line-height: 1.6;
+}
+
+.features__img{
+    margin-right: -80px;
+}
+
+.features__img img{
+    width: 100%;
+    animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(1deg) translate(2px,2px)
+    }
+
+    50% {
+        transform: rotate(-1deg) translate(-2px,-2px)
+    }
+
+    100% {
+        transform: rotate(1deg) translate(2px,2px)
+    }
+}
+
+/* portfolio */
+#portfolio{
+    padding: 120px;
+}
+
+
+
