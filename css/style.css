@@ -600,3 +600,135 @@ header {
     transform: translate(0,0);
 }
 
+/* plan */
+#plan{
+    padding: 120px;
+    background-image: url(../images/bg16.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.plan__container{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.plan__content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+}
+
+.plan__item{
+    padding: 35px 60px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.1) ;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: white;
+}
+
+.plan__item h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.plan__item p{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.plan__item p span{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f8ae56;
+}
+
+.plan__item img{
+    width: 120px;
+}
+
+.plan__item ul{
+    padding: 15px 0;
+    text-align: left;
+    list-style: none;
+    line-height: 1.6;
+    border-top: 1px solid #e1e1f0  ;
+}
+
+.plan__item ul li{
+    font-size: 18px;
+    padding: 5px;
+}
+
+.plan__item ul li i{
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: center;
+    background-color: #feeff3;
+    color: #f55f8d;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.plan__item:hover{
+    border-image: url(../images/br.png) 1 round;
+}
+
+
+/* Testimonial */
+
+.testimonial-content {
+    max-width: 1199px;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .testimonial-thumbs .testimonial-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    padding: 4px;
+    position: relative;
+    z-index: 2;
+    background-color: pink;
+  }
+  
+  .testimonial-thumbs {
+    width: 300px;
+    margin: auto;
+    box-sizing: border-box;
+    height: 170px;
+    position: relative;
+  }
+  .testimonial-comment {
+    min-height: 300px;
+    width: 100%;
+  }
+  .testimonial-comment .swiper-wrapper {
+    padding-bottom: 20px;
+  }
+  .testimonial-thumbs .testimonial-pic {
+    padding: 30px 0 0;
+    transition: all 0.5s;
+  }
+  .testimonial-thumbs .swiper-slide-thumb-active .testimonial-pic {
+    padding: 0 0 40px;
+  }
+  .testimonial-text {
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px 0 rgb(0 0 0 / 10%);
+    margin: 20px 100px;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
